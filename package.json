@@ -1,0 +1,48 @@
+{
+  "name": "docpad-plugin-pluginmanager",
+  "version": "2.0.0",
+  "description": "Manages the plugins in a Docpad application",
+  "homepage": "https://github.com/SteveMcArthur/docpad-plugin-pluginmanager",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "pluginmanager"
+  ],
+  "author": "Steve McArthur <contact@stevemcarthur.co.uk> (http://www.stevemcarthur.co.uk)",
+  "maintainers": [
+    "Steve McArthur <contact@stevemcarthur.co.uk> (https://github.com/SteveMcArthur)"
+  ],
+  "contributors": [
+    "Steve McArthur (https://github.com/SteveMcArthur)"
+  ],
+  "bugs": {
+    "url": "https://github.com/SteveMcArthur/docpad-plugin-pluginmanager/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SteveMcArthur/docpad-plugin-pluginmanager.git"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "peerDependencies": {
+    "docpad": "6"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "docpad": "6",
+    "projectz": "~0.3.13",
+    "chai": "^3.5.0",
+    "request": "^2.72.0"
+  },
+  "main": "./out/pluginmanager.plugin.js",
+  "scripts": {
+    "test": "node ./out/pluginmanager.test.js"
+  },
+  "license": "MIT",
+  "cakeConfiguration": {
+    "COFFEE_SRC_PATH": "src"
+  }
+}
