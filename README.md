@@ -20,7 +20,7 @@ At the moment it adds the list of installed plugins to the docpad templateData w
 ### Example template (eco)
 
 Eco template that generates a table listing the plugins used in an application.
-```eco
+```html
 <table width="100%">
   <thead>
     <tr>
