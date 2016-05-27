@@ -16,6 +16,34 @@ At the moment it adds the list of installed plugins to the docpad templateData w
             readmeURL: '/admin/plugins/:pluginName/readme'
             packageURL: '/admin/plugins/:pluginName/package'
 ```
+
+### Example template (eco)
+
+Eco template that generates a table listing the plugins used in an application.
+```eco
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th width="60%">Description</th>
+      <th>Version</th>
+      <th>Enabled</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%plugins = @loadedPlugins%>
+    <%for name,plugin of plugins:%>
+    <%rowClass = if plugin.isEnabled() then "" else "disabled"%>
+    <tr class="<%-rowClass%>" data-name="<%-name%>">  
+      <td><a data-id="<%-name%>" class="readme-btn" href="/admin/readme/"><%-name%></a></td>
+      <td><%-plugin.description%></td>
+      <td><%-plugin.version%></td>
+      <td><%-plugin.isEnabled()%></td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
+```
 ## License
 
 Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT license](http://creativecommons.org/licenses/MIT/)
